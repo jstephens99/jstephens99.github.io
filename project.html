@@ -42,20 +42,24 @@
                     background-color: forestgreen;
                     color: white;
                 }
-                    /* Links on mouse-over */
+                /* Links on mouse-over */
                 .sidebar a:hover:not(.active) {
-                background-color: seagreen;                
+                    background-color: seagreen;
                 }
 
         div.content {
             margin-left: 200px;
             padding: 1px 16px;
-            height: auto;            
+            height: auto;
+        }
+
+        div.content > div {
+            padding: 10px;
         }
 
         header {
-        font-size: 1em;
-        text-align: center;
+            font-size: 1em;
+            text-align: center;
         }
 
         .container {
@@ -73,79 +77,51 @@
         }
 
         /*responsive*/
-            @media (max-width: 1000px) {
+        @media (max-width: 1000px) {
 
-                .container {
-                    float: none;
-                    width: 100%;
-                }
-
+            .container {
+                float: none;
+                width: 100%;
             }
-                                       
-            @media screen and (max-width: 700px) {
-                .sidebar {
-                    width: 100%;
-                    height: auto;
-                    position: relative;
-                }
+        }
 
-                    .sidebar a {
-                        float: left;
-                    }
-
-                div.content {
-                    margin-left: 0;
-                }                        
+        @media screen and (max-width: 700px) {
+            .sidebar {
+                width: 100%;
+                height: auto;
+                position: relative;
             }
 
+                .sidebar a {
+                    float: left;
+                }
+
+            div.content {
+                margin-left: 0;
+            }
+        }
     </style>
 </head>
-
-
 <body>
-
     <div class="sidebar">
         <header>
             <h2> Games by<br /> Jacob Stephens</h2>
         </header>
-        <a class="active" href="index.html">Home</a>
+        <a href="index.html">Home</a>
         <a href="categories.html">Categories</a>
         <a href="about.html">About</a>
     </div>
 
     <div class="content">
         <header>
-            <h1>Top 3 Projects</h1>
+            <h1>Project Name</h1>
         </header>
 
-        <div class="container">
-            <div>
-                
-                <a target="_blank" href="project.html">
-                    <img src="\assets\Rose logo-02.png" />
-                </a>
-            </div>
-            <div class="project_name"><h2>Project 1</h2></div>
-        </div>
+        <div>Project Time:</div>
+        <div>Team Size:</div>
+        <div>Role:</div>
+        <div>Tools:</div>
 
-        
-        <div class="container">
-            <div>
-                <a target="_blank" href="project.html">
-                    <img src="\assets\Rose logo-02.png" />
-                </a>
-            </div>
-            <div class="project_name"><h2>Project 2</h2></div>
-        </div>
-
-        <div class="container">                 
-            <div>
-                <a target="_blank" href="project.html">
-                    <img src="\assets\Rose logo-02.png" />
-                </a>
-            </div>
-            <div class="project_name"><h2>Project 3</h2></div>
-        </div>
 
     </div>
 </body>
