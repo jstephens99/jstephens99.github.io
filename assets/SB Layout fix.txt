@@ -1,0 +1,19 @@
+# creating variables to work with for my brain
+height = 100
+width = 100
+min_offest = 20
+
+if screen_width >= (width*3+min_offset*4):
+    additional_offset = (screen_width - 3*width - 4*min_offset) / 4
+    place item1 at x = min_offset + additional_offset, y = screen_height / 2 - height / 2
+    place item 2 at x = 2*(min_offset + additional_offset) + width, y = screen_height / 2 - height / 2
+    place item 3 at x = 3*(min_offset + additional_offset) + 2 * width, y = screen_height / 2 - height / 2
+
+else if screen_width < (width*2 + 3*min_offset):
+    #idk how wrapping works but you just place them in a column
+
+else:
+    additional_offset = (screen_width - 2*width - 3*min_offset) / 3
+    place item1 at x = min_offset + additional_offset, y = screen_height / 3 - height / 2
+    place item 2 at x = 2*(min_offset + additional_offset) + width, y = screen_height / 3 - height / 2
+    place item 3 at x = screen_width / 2 - width / 2, y = 2*screen_height / 3 - height / 2
