@@ -10,8 +10,10 @@
 
         body {
             font-family: Arial, Helvetica, sans-serif;
-            background-color: forestgreen;
-            color: white;
+            /*was forestgreen*/
+            background-color: LemonChiffon;
+            color: black;
+            font-size: 1.2em;
         }
 
         img {
@@ -23,7 +25,7 @@
             margin: 0;
             padding: 0;
             width: 200px;
-            background-color: darkgreen;
+            background-color: mediumseagreen;
             position: fixed;
             height: 100%;
             overflow: auto;
@@ -39,40 +41,76 @@
             }
 
                 .sidebar a.active {
-                    background-color: forestgreen;
+                    background-color: seagreen;
                     color: white;
                 }
                 /* Links on mouse-over */
                 .sidebar a:hover:not(.active) {
                     background-color: seagreen;
                 }
-
+        /* Everything but the sidebar */
         div.content {
             margin-left: 200px;
-            padding: 1px 16px;
+            /*padding: 1px 16px;*/
             height: auto;
         }
 
-        header {
-            font-size: 1em;
+        header h2 {
+            font-size: 1.5em;
             text-align: center;
+            color: white;
         }
 
+        header h1 {
+            font-size: 2.5em;
+            text-align: left;
+            background-color: seagreen;
+            padding: 20px;
+            color: white;
+        }
+
+        div.gallery {
+            margin-left: 0px;
+        }
+        /* Each project in its own div.container */
         .container {
             position: relative;
-            width: 29.999%;
+            width: 30%;
             float: left;
             margin: 20px;
-            padding: 20px;
+            /*padding: 20px;*/
             text-align: center;
+            border: 3px solid red;
         }
 
+        .imagelink {
+            position: static;
+            margin: auto;
+            /*float: none;*/
+            border: 3px solid blue;
+        }
+
+            .imagelink img {
+                width: 100%;
+                height: auto;
+                border: 3px solid red;
+            }
+        /* text under project image in same container */
         .project_name {
             padding: 16px;
             text-align: center;
+            font-size: 1em;
         }
 
-        /*responsive*/
+        /* screensize responsive below */
+        /*@media (max-width: 1500px) {
+
+                .container {
+                    float: none;
+                    width: 45%;
+                }
+            }*/
+
         @media (max-width: 1000px) {
 
             .container {
@@ -85,7 +123,7 @@
             .sidebar {
                 width: 100%;
                 height: auto;
-                position: relative;
+                position: sticky;
             }
 
                 .sidebar a {
@@ -116,33 +154,35 @@
             <h1>Categories</h1>
         </header>
 
-        <div class="container">
-            <div>
+        <div class="gallery">
+            <div class="container">
+                <div class="imagelink">
 
-                <a target="_blank" href="category.html">
-                    <img src="\assets\Rose logo-02.png" />
-                </a>
+                    <a target="_blank" href="category.html">
+                        <img src="assets\Rose logo-02.png" />
+                    </a>
+                </div>
+                <div class="project_name"><h2>Category 1</h2></div>
             </div>
-            <div class="project_name"><h2>Category 1</h2></div>
-        </div>
 
 
-        <div class="container">
-            <div>
-                <a target="_blank" href="category.html">
-                    <img src="\assets\Rose logo-02.png" />
-                </a>
+            <div class="container">
+                <div class="imagelink">
+                    <a target="_blank" href="category.html">
+                        <img src="assets\Rose logo-02.png" />
+                    </a>
+                </div>
+                <div class="project_name"><h2>Category 2</h2></div>
             </div>
-            <div class="project_name"><h2>Category 2</h2></div>
-        </div>
 
-        <div class="container">
-            <div>
-                <a target="_blank" href="category.html">
-                    <img src="\assets\Rose logo-02.png" />
-                </a>
+            <div class="container">
+                <div class="imagelink">
+                    <a target="_blank" href="category.html">
+                        <img src="assets\Rose logo-02.png" />
+                    </a>
+                </div>
+                <div class="project_name"><h2>Category 3</h2></div>
             </div>
-            <div class="project_name"><h2>Category 3</h2></div>
         </div>
 
     </div>
